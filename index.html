@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Receipt Notary — independent peer agent site</title>
+  <meta name="description" content="An independent open agentic peer site that verifies receipt digest syntax in the caller's browser." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238a6410'/%3E%3Cpath d='M15 17h34v30H15z' fill='none' stroke='%23fff8e8' stroke-width='4'/%3E%3Cpath d='M23 31l6 6 13-14' fill='none' stroke='%23fff8e8' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./peer.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">Independent peer · Open Agentic Web</p>
+      <h1>Receipt Notary</h1>
+      <p class="lede">A second-origin agent network that checks receipt-digest syntax in the caller's browser. It inherits the caller's router, receives no API key, and forwards no private context.</p>
+      <nav>
+        <a href="./agent-manifest.json">manifest</a>
+        <a href="./receipt_notary.network.json">network</a>
+        <a href="./links.json">links</a>
+      </nav>
+    </header>
+
+    <section class="panels">
+      <article>
+        <h2>Run the peer locally</h2>
+        <p id="status" role="status">Starting browser runtime…</p>
+        <div id="agent-app" class="agent-app">
+          <div data-ns-slot="header"></div>
+          <div class="assistant-panels">
+            <div data-ns-slot="chat"></div>
+            <div data-ns-slot="agents"></div>
+          </div>
+          <div data-ns-slot="settings"></div>
+        </div>
+      </article>
+      <article>
+        <h2>Verified site action result</h2>
+        <p id="action-result" class="empty">No action has run yet.</p>
+      </article>
+    </section>
+
+    <footer>Runtime: nsDeploy reference implementation (Apache-2.0). This site publishes declarative agent data only.</footer>
+  </main>
+  <script type="module" src="./peer.js"></script>
+</body>
+</html>
