@@ -239,7 +239,9 @@ export class Engine {
 
   async _loadPublishedLinks(base, networkName) {
     try {
-      const resp = await fetch(resolveUrl(base, "/links.json"), { cache: "no-store" });
+      // ANB extension: resolve links.json relative to the published site base so
+      // GitHub Pages project subpaths work. Upstream used an absolute-root path.
+      const resp = await fetch(`${base.replace(/\/$/, "")}/links.json`, { cache: "no-store" });
       if (!resp.ok) return {};
       const doc = await resp.json();
       return doc?.networks?.[networkName] || {};
