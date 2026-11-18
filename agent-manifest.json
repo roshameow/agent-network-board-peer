@@ -25,12 +25,6 @@
     "deny_origins": [],
     "note": "This leaf peer does not contact other agent sites."
   },
-  "actions": {
-    "version": 1,
-    "bridge": "./action-bridge.html",
-    "module": "./site-actions.js",
-    "callerOrigins": ["*"]
-  },
   "deployment": {
     "mode": "static",
     "self_contained_runtime": true,
